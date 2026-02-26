@@ -2,7 +2,6 @@ import os
 import json
 import time
 from datetime import datetime
-# Gerekli kütüphaneleri içe aktarırken hata alıyorsan 'pip install cryptography' yapmalısın
 from cryptography.hazmat.primitives.asymmetric import dh
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
@@ -20,7 +19,7 @@ public_key_receiver = private_key_receiver.public_key()
 
 shared_key_sender = private_key_sender.exchange(public_key_receiver)
 
-# HKDF ile AES anahtarı türet
+# HKDF ile AES anahtarı türetme
 derived_key = HKDF(
     algorithm=hashes.SHA256(),
     length=32,
@@ -98,3 +97,4 @@ if dosya_sifrele(test_dosyasi):
     if dosya_coz(test_dosyasi + ".enc"):
         log_kaydet(test_dosyasi + ".enc", "Çözüldü")
         print("Dosya çözüldü, 'cozulmus.txt' oluşturuldu.")
+
