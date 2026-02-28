@@ -1,3 +1,4 @@
+# ========= ŞİFRELEME UYGULAMAMIZIN DOSYA OLUŞTURMA VE ANAHTARLAMA KISMI =========
 import os
 import json
 import time
@@ -97,4 +98,5 @@ if dosya_sifrele(test_dosyasi):
     if dosya_coz(test_dosyasi + ".enc"):
         log_kaydet(test_dosyasi + ".enc", "Çözüldü")
         print("Dosya çözüldü, 'cozulmus.txt' oluşturuldu.")
+
 
